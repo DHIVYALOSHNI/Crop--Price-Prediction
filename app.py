@@ -7,7 +7,7 @@ app = Flask(_name_)
 # Home page route
 @app.route('/')
 def home():
-    return render_template('index.html')
+    return render_template("templates/index.html")
 
 # Prediction route
 @app.route('/predict', methods=['POST'])
@@ -31,3 +31,4 @@ def predict():
 if _name_ == '_main_':
 
     app.run(debug=True)
+
