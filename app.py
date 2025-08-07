@@ -20,7 +20,7 @@ def predict():
     ph_value = float(request.form['ph_value'])
     rainfall = float(request.form['rainfall'])
 
-    with open('trained_model.pkl', 'rb') as file:
+    with open("trained_model.pkl", "rb") as file:
     model = pickle.load(file)
    # Prepare input for prediction
     input_data = np.array([[nitrogen, phosphorus, potassium, temperature, humidity, ph_value, rainfall]])
@@ -31,4 +31,5 @@ def predict():
 if _name_ == '_main_':
 
     app.run(debug=True)
+
 
